@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/* ============ Design Tokens ============ */
+:root {
+  --brown: #8b6f47;
+  --brown-deep: #6b5330;
+  --brown-light: #a68b5e;
+  --gold: #c5a55a;
+  --gold-bright: #d4b96a;
+  --gold-pale: #e8d9a0;
+  --gold-wash: #fbf7ef;
+  --ink: #2b2b2b;
+  --ink-light: #4a4a4a;
+  --warm-gray: #f5f3ef;
+  --warm-gray-light: #faf8f5;
+  --border-subtle: #e8e4de;
+  --border-soft: #ddd8d0;
+  --white: #ffffff;
+}
+
+html,
+body {
+  background: #ececec;
+  color: var(--ink);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+.font-sans {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ============ Slide Canvas ============ */
+@page {
+  size: 297mm 210mm;
+  margin: 0;
+}
+
+.slide {
+  width: 297mm;
+  height: 210mm;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  margin: 16px auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 10pt;
+  line-height: 1.45;
+  page-break-after: always;
+  break-after: page;
+}
+
+/* ============ Print Rules ============ */
+@media print {
+  html,
+  body {
+    background: white;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .slide {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ============ Utility Classes ============ */
+.eyebrow {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1.08;
+}
+
+.body-text {
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+
+.body-sm {
+  font-family: "Inter", sans-serif;
+  color: var(--ink-light);
+  font-size: 9.5pt;
+  line-height: 1.5;
+}
+
+.caption {
+  font-family: "Inter", sans-serif;
+  color: #999;
+  font-size: 8.5pt;
+}
+
+.gold-rule {
+  background: var(--gold);
+}
+
+.hairline {
+  background: var(--border-subtle);
+}
+
+/* Gold diagonal pattern */
+.pattern-gold-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(197, 165, 90, 0.035) 0,
+    rgba(197, 165, 90, 0.035) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+/* Corner bracket corners */
+.bracket-tl {
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  width: 28px;
+  height: 28px;
+  border-top: 1.5px solid var(--gold);
+  border-left: 1.5px solid var(--gold);
+  opacity: 0.6;
+}
+.bracket-br {
+  position: absolute;
+  bottom: 36px;
+  right: 36px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 1.5px solid var(--gold);
+  border-right: 1.5px solid var(--gold);
+  opacity: 0.6;
+}
+
+.bracket-white-tl {
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  width: 28px;
+  height: 28px;
+  border-top: 1.5px solid #ffffff;
+  border-left: 1.5px solid #ffffff;
+  opacity: 0.3;
+}
+.bracket-white-br {
+  position: absolute;
+  bottom: 36px;
+  right: 36px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 1.5px solid #ffffff;
+  border-right: 1.5px solid #ffffff;
+  opacity: 0.3;
+}
+
+/* Rotated gold square */
+.geo-square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.geo-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.geo-dot-brown {
+  width: 6px;
+  height: 6px;
+  background: var(--brown);
+  flex-shrink: 0;
+}
+
+/* Gold dot marker for lists */
+.dot-marker::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  margin-right: 10px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.dot-marker {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.dot-marker::before {
+  margin-top: 6px;
+}
+
+/* Image placeholder (shows if image not provided) */
+.img-placeholder {
+  background: linear-gradient(135deg, #f5f3ef 0%, #e8e4de 100%);
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 9pt;
+  text-align: center;
+}
+
+/* Download button animations */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 111, 71, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(139, 111, 71, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 111, 71, 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+/* Hide scrollbar chrome but allow scroll */
+html {
+  scroll-behavior: smooth;
+}
