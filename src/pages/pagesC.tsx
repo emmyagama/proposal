@@ -271,7 +271,7 @@ export const EngagementDetailsA: React.FC = () => (
       <PageHeader
         eyebrow="03 · What RMAFC Could Commission"
         title="Engagement Detail"
-        subtitle="Engagements 01 and 02 — the foundational diagnostic and the revenue mobilisation strategy that follows from it."
+        subtitle="Engagements 01 and 02: the foundational diagnostic and the revenue mobilisation strategy that follows from it."
       />
 
       <div
@@ -303,7 +303,7 @@ export const EngagementDetailsA: React.FC = () => (
             "Governance and committee effectiveness assessment",
             "Phased transformation roadmap (0–90d · 3–12m · 12–36m)",
           ]}
-          relevance="Pillar II — Establishes analytical foundation for all subsequent engagements"
+          relevance="Pillar II: Establishes analytical foundation for all subsequent engagements"
         />
 
         <EngagementDetail
@@ -324,7 +324,7 @@ export const EngagementDetailsA: React.FC = () => (
             "Revenue mobilisation strategy",
             "Implementation roadmap",
           ]}
-          relevance="Pillar I — Technical partners in oil & gas, econometrics and data analytics deployed as required"
+          relevance="Pillar I: Technical partners in oil & gas, econometrics and data analytics deployed as required"
         />
       </div>
     </div>
@@ -349,7 +349,7 @@ export const EngagementDetailsB: React.FC = () => (
       <PageHeader
         eyebrow="03 · What RMAFC Could Commission"
         title="Engagement Detail"
-        subtitle="Engagements 03, 04 and 05 — intelligence infrastructure, capability, and fiscal & debt advisory."
+        subtitle="Engagements 03, 04 and 05: intelligence infrastructure, capability, and fiscal & debt advisory."
       />
 
       <div
@@ -375,7 +375,7 @@ export const EngagementDetailsB: React.FC = () => (
             "KPI and reporting framework",
             "Dashboard specifications",
           ]}
-          relevance="Pillar I — Data & analytics partners deployed"
+          relevance="Pillar I: Data & analytics partners deployed"
         />
         <EngagementDetail
           num="04"
@@ -392,7 +392,7 @@ export const EngagementDetailsB: React.FC = () => (
             "Impact assessment",
             "Academy design and curriculum",
           ]}
-          relevance="Pillar III — Foundation for the RMAFC Fiscal Governance Academy"
+          relevance="Pillar III: Foundation for the RMAFC Fiscal Governance Academy"
         />
         <EngagementDetail
           num="05"
@@ -409,7 +409,7 @@ export const EngagementDetailsB: React.FC = () => (
             "Implementation roadmap",
             "Internal team capacity building component",
           ]}
-          relevance="Pillar IV — Draws on GMPC's debt recovery experience with Bank of Agriculture"
+          relevance="Pillar IV: Draws on GMPC's debt recovery experience with Bank of Agriculture"
           gold
         />
       </div>
@@ -435,33 +435,33 @@ const roleRows = [
   },
   {
     domain: "Stakeholder engagement",
-    gmpc: "Lead — design, facilitation, management",
-    partner: "—",
+    gmpc: "Lead: design, facilitation, management",
+    partner: "N/A",
   },
   {
     domain: "Institutional coordination across government levels",
-    gmpc: "Lead — process management and protocols",
-    partner: "—",
+    gmpc: "Lead: process management and protocols",
+    partner: "N/A",
   },
   {
     domain: "Implementation planning",
-    gmpc: "Lead — sequencing, roadmap, governance",
-    partner: "—",
+    gmpc: "Lead: sequencing, roadmap, governance",
+    partner: "N/A",
   },
   {
     domain: "Change management",
     gmpc: "Lead",
-    partner: "—",
+    partner: "N/A",
   },
   {
     domain: "Communication strategy",
     gmpc: "Lead",
-    partner: "—",
+    partner: "N/A",
   },
   {
     domain: "Capability building for RMAFC teams",
-    gmpc: "Lead — preparing internal teams for execution",
-    partner: "—",
+    gmpc: "Lead: preparing internal teams for execution",
+    partner: "N/A",
   },
 ];
 
@@ -642,7 +642,7 @@ export const AllocationFormula: React.FC = () => (
             fontSize: "9.5pt",
           }}
         >
-          Our position —{" "}
+          Our position:{" "}
         </strong>
         <span
           style={{
@@ -654,7 +654,7 @@ export const AllocationFormula: React.FC = () => (
         >
           Credible. Honest. Ambitious without overclaiming. GMPC offers genuine
           strengths in the process, institutional and capability dimensions of
-          the review — while being transparent that specialist econometric and
+          the review, while being transparent that specialist econometric and
           statistical partners contribute the technical modelling.
         </span>
       </div>
@@ -735,7 +735,7 @@ export const DeliveryMethodology: React.FC = () => (
       <PageHeader
         eyebrow="04 · How We Work"
         title="Delivery Methodology"
-        subtitle="Every GMPC engagement follows a structured four-stage approach — adapted to the specific scope and requirements of each assignment."
+        subtitle="Every GMPC engagement follows a structured four-stage approach, adapted to the specific scope and requirements of each assignment."
       />
 
       <div
@@ -886,7 +886,7 @@ const chainItems = [
   },
   {
     title: "Specialist Technical Projects",
-    body: "Revenue forensics, econometrics, data analytics — deployed through GMPC's specialist network as required.",
+    body: "Revenue forensics, econometrics, data analytics, deployed through GMPC's specialist network as required.",
     gold: true,
   },
 ];
@@ -906,7 +906,7 @@ export const EngagementModel: React.FC = () => (
       <PageHeader
         eyebrow="04 · How We Work"
         title="Engagement Model"
-        subtitle="RMAFC does not need to determine the full scope of collaboration at the outset. GMPC is designed to engage at any point in this chain — and to scale as institutional needs and priorities become clearer."
+        subtitle="RMAFC does not need to determine the full scope of collaboration at the outset. GMPC is designed to engage at any point in this chain, and to scale as institutional needs and priorities become clearer."
       />
 
       <div style={{ display: "flex", gap: 28, flex: 1 }}>
@@ -1023,7 +1023,7 @@ export const EngagementModel: React.FC = () => (
               }}
             >
               A diagnostic is always a credible starting point. It establishes
-              the evidence base for everything that follows — and gives both
+              the evidence base for everything that follows, and gives both
               parties a shared understanding before committing to a larger
               programme.
             </div>
@@ -1042,7 +1042,7 @@ export const EngagementModel: React.FC = () => (
           >
             This matters for RMAFC because no unsolicited proposal can fully
             substitute for a direct conversation. Our proposed next step is
-            designed to create that conversation efficiently — and to ensure
+            designed to create that conversation efficiently, and to ensure
             that any subsequent engagement is precisely targeted.
           </div>
         </div>
