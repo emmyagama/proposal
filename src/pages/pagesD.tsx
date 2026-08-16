@@ -567,7 +567,37 @@ export const SpecialistNetwork: React.FC = () => (
 /* ========================================================================
    PAGE 26 — TRUSTED BY LEADING ORGANISATIONS
    ======================================================================== */
-const logoFiles = Array.from({ length: 29 }, (_, i) => `Picture${i + 1}.png`);
+const logoFiles = [
+  "Picture1.png",
+  "Picture2.png",
+  "Picture3.jpg",
+  "Picture4.png",
+  "Picture5.png",
+  "Picture6.png",
+  "Picture7.png",
+  "Picture8.png",
+  "Picture9.png",
+  "Picture10.png",
+  "Picture11.png",
+  "Picture12.png",
+  "Picture13.png",
+  "Picture14.png",
+  "Picture15.jpg",
+  "Picture16.png",
+  "Picture17.png",
+  "Picture18.png",
+  "Picture19.png",
+  "Picture20.png",
+  "Picture21.png",
+  "Picture22.jpg",
+  "Picture23.jpg",
+  "Picture24.jpg",
+  "Picture25.png",
+  "Picture26.png",
+  "Picture27.png",
+  "Picture28.jpg",
+  "Picture29.png",
+];
 
 export const TrustedBy: React.FC = () => (
   <div className="slide">
@@ -661,7 +691,6 @@ export const TrustedBy: React.FC = () => (
     </div>
   </div>
 );
-
 /* ========================================================================
    PAGE 27 — PROPOSED NEXT STEP
    ======================================================================== */
@@ -1140,52 +1169,18 @@ export const BackCover: React.FC = () => (
         margin: "0 auto",
       }}
     >
-      {/* White logo mark */}
-      <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28 }}>
-        <div
+      {/* Goldenmuv logo */}
+      <div style={{ marginBottom: 28 }}>
+        <img
+          src="/images/goldenmuv_logo.png"
+          alt="Goldenmuv Premium Consulting"
           style={{
-            width: 60,
-            height: 60,
-            border: "1.5px solid white",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            height: 80,
+            width: "auto",
+            display: "block",
+            margin: "0 auto",
           }}
-        >
-          <div
-            style={{
-              width: 30,
-              height: 30,
-              background: "var(--gold-pale)",
-              transform: "rotate(45deg)",
-            }}
-          />
-        </div>
-        <div style={{ lineHeight: 1 }}>
-          <div
-            style={{
-              fontFamily: "Playfair Display, serif",
-              fontWeight: 700,
-              fontSize: "38pt",
-              color: "white",
-              letterSpacing: "3px",
-            }}
-          >
-            GMPC
-          </div>
-          <div
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: "10pt",
-              color: "rgba(255,255,255,0.7)",
-              letterSpacing: "2.5px",
-              marginTop: 4,
-            }}
-          >
-            PREMIUM CONSULTING
-          </div>
-        </div>
+        />
       </div>
 
       <div
@@ -1260,6 +1255,5 @@ export const BackCover: React.FC = () => (
     </div>
   </div>
 );
-
 /* silence unused warnings */
 export { GoldRule };
