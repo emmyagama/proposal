@@ -283,7 +283,7 @@ export const ExecutiveProposition: React.FC = () => (
         <div style={{ marginTop: 24 }}>
           <DotList
             items={[
-              "Revenue streams are multiplying — oil, gas, customs, CIT, VAT, minerals, investments — each with its own architecture and leakage points.",
+              "Revenue streams are multiplying: oil, gas, customs, CIT, VAT, minerals, investments; each with its own architecture and leakage points.",
               "Analytical and data demands are intensifying. Receiving data is no longer enough; RMAFC must interrogate and interpret it.",
               "The gap between mandate and delivery is the institutional risk.",
             ]}
@@ -299,8 +299,8 @@ export const ExecutiveProposition: React.FC = () => (
           className="body-text"
           style={{ marginTop: 14, fontSize: "11.5pt" }}
         >
-          A strategic collaboration in four areas — institutional
-          transformation, plus a specialist technical network — to convert
+          A strategic collaboration in four areas: institutional
+          transformation, plus a specialist technical network, to convert
           mandate into measurable outcomes.
         </p>
 
@@ -548,7 +548,7 @@ export const Divider05: React.FC = () => (
     eyebrow="SECTION 05"
     title="WHY GMPC"
     subtitle="Strategy · Transformation · Capability"
-    quote="Institutions — not just policies — determine outcomes. We work to close that gap."
+    quote="Institutions, not just policies, determine outcomes. We work to close that gap."
     image="div05_gmpc.jpg"
   />
 );
@@ -596,7 +596,7 @@ export const MandateSystem: React.FC = () => (
       <PageHeader
         eyebrow="01 · Our Understanding of RMAFC"
         title="RMAFC's Mandate as an Interconnected System"
-        subtitle="Five functions. Not a hierarchy — a system. A weakness in any one limits all the others."
+        subtitle="Five functions. Not a hierarchy, but a system. A weakness in any one limits all the others."
       />
 
       <div style={{ display: "flex", gap: 32, flex: 1 }}>
@@ -679,7 +679,7 @@ export const MandateSystem: React.FC = () => (
           >
             These five functions are interdependent. A weakness in any one of
             them limits the effectiveness of all the others. They are not a
-            hierarchy — they are a system. And systems require not just policy
+            hierarchy, but a system. And systems require not just policy
             expertise, but institutional infrastructure to sustain them.
           </p>
 
@@ -771,7 +771,7 @@ const challengeCards = [
     n: "01",
     title: "Growing Complexity of Revenue Streams",
     body:
-      "Oil, gas, customs, CIT, VAT, minerals, investments — each with its own architecture and leakage points.",
+      "Oil, gas, customs, CIT, VAT, minerals, investments; each with its own architecture and leakage points.",
     impl: "Requires infrastructure beyond traditional reporting.",
   },
   {
@@ -779,13 +779,13 @@ const challengeCards = [
     title: "From Reporting to Intelligence",
     body:
       "Receiving data is not the same as interrogating and interpreting it. RMAFC must be an active intelligence centre.",
-    impl: "Not a reporting function — an analytical one.",
+    impl: "Not a reporting function, but an analytical one.",
   },
   {
     n: "03",
     title: "Fiscal Efficiency into Outcomes",
     body:
-      "Analysis → recommendation → implementation. Needs process and accountability.",
+      "Analysis leads to recommendation, which leads to implementation. Needs process and accountability.",
     impl: "As institutional as it is technical.",
   },
   {
@@ -793,13 +793,13 @@ const challengeCards = [
     title: "Coordinating Across Institutions",
     body:
       "Work cuts across FIRS, NNPC, NCS, CBN, states and ministries.",
-    impl: "Needs frameworks and protocols — not just relationships.",
+    impl: "Needs frameworks and protocols, not just relationships.",
   },
   {
     n: "05",
     title: "Building & Sustaining Capability",
     body:
-      "Analysts, economists, data specialists, strategists — and their leaders.",
+      "Analysts, economists, data specialists, strategists, and their leaders.",
     impl: "A persistent challenge, not a one-off course.",
     brown: true,
   },
@@ -820,7 +820,7 @@ export const FiveComplexity: React.FC = () => (
       <PageHeader
         eyebrow="01 · Our Understanding of RMAFC"
         title="Five Areas of Increasing Complexity"
-        subtitle="Not institutional failure — the rising sophistication of the fiscal environment."
+        subtitle="Not institutional failure, but the rising sophistication of the fiscal environment."
       />
 
       <div
