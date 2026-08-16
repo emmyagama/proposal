@@ -338,7 +338,7 @@ export const PillarI: React.FC = () => (
         <div style={{ flex: "0 0 58%", paddingRight: 18, borderRight: "1px solid var(--border-subtle)" }}>
           <p className="body-text" style={{ fontSize: "11pt", lineHeight: 1.55 }}>
             This is the hero pillar. It addresses RMAFC's core fiscal mandate
-            directly — helping the Commission identify, protect and grow
+            directly, helping the Commission identify, protect and grow
             Nigeria's consolidated revenue base.
           </p>
 
@@ -370,7 +370,7 @@ export const PillarI: React.FC = () => (
           </div>
 
           <CredibilityNote>
-            <strong style={{ color: "var(--brown)" }}>Technical Partner Note — </strong>
+            <strong style={{ color: "var(--brown)" }}>Technical Partner Note: </strong>
             Where engagements require forensic accounting, oil and gas revenue
             analysis, econometrics or data analytics depth, GMPC deploys
             specialist partners alongside its institutional and strategic
@@ -500,8 +500,8 @@ export const PillarII: React.FC = () => (
       <div style={{ display: "flex", gap: 22, flex: 1 }}>
         <div style={{ flex: "0 0 58%", paddingRight: 18, borderRight: "1px solid var(--border-subtle)" }}>
           <p className="body-text" style={{ fontSize: "10.5pt", lineHeight: 1.5 }}>
-            The institutional machinery that executes RMAFC's mandate — its
-            structures, processes, governance, and performance systems —
+            The institutional machinery that executes RMAFC's mandate, its
+            structures, processes, governance, and performance systems,
             determines whether policy expertise translates into outcomes. This
             pillar addresses that machinery directly.
           </p>
@@ -593,7 +593,7 @@ export const PillarII: React.FC = () => (
           <CredibilityNote>
             This pillar draws on GMPC's demonstrated organisational diagnostic
             work across Nigerian public institutions, including{" "}
-            <strong style={{ color: "var(--brown)" }}>NASIDA</strong> — where
+            <strong style={{ color: "var(--brown)" }}>NASIDA</strong>, where
             structure, governance, capability and performance were all assessed
             and a transformation roadmap produced.
           </CredibilityNote>
@@ -679,7 +679,7 @@ export const PillarIII: React.FC = () => (
           <p className="body-text" style={{ fontSize: "10.5pt", lineHeight: 1.5 }}>
             The sophistication of RMAFC's mandate requires sophisticated
             people. Commissioners, Directors, senior managers, technical
-            officers and committee members — each with different development
+            officers and committee members, each with different development
             needs and the same institutional objective: converting analytical
             input into institutional action.
           </p>
@@ -706,14 +706,14 @@ export const PillarIII: React.FC = () => (
             />
             <EngagementCard
               title="★ RMAFC Fiscal Governance Academy"
-              body="A structured, recurring capability platform — not a one-off workshop. Could extend to subnational fiscal institutions within RMAFC's mandate."
+              body="A structured, recurring capability platform, not a one-off workshop. Could extend to subnational fiscal institutions within RMAFC's mandate."
               highlight
             />
           </div>
 
           <CredibilityNote>
             <strong style={{ color: "var(--brown)" }}>GMPC has designed and delivered structured leadership and technical programmes for:</strong>{" "}
-            FUDMA — HODs, Heads of Faculty, lecturers. Mangal Industries — workforce training and SOPs.
+            FUDMA: HODs, Heads of Faculty, lecturers. Mangal Industries: workforce training and SOPs.
           </CredibilityNote>
         </div>
 
@@ -798,7 +798,7 @@ export const PillarIV: React.FC = () => (
             variables. Nigeria's fiscal sustainability depends on the
             interaction between what government earns and what it owes.
             RMAFC's oversight of the revenue side makes its understanding of
-            the debt side essential — not peripheral.
+            the debt side essential, not peripheral.
           </p>
 
           <div
@@ -830,7 +830,7 @@ export const PillarIV: React.FC = () => (
 
           <CredibilityNote>
             <strong style={{ color: "var(--brown)" }}>GMPC's existing debt advisory capability</strong> was demonstrated
-            through its debt recovery engagement with the Bank of Agriculture —
+            through its debt recovery engagement with the Bank of Agriculture,
             where financial analysis, portfolio assessment and structured
             recovery strategy were combined into a single advisory programme.
           </CredibilityNote>
@@ -1102,8 +1102,8 @@ export const TechPartnerModel: React.FC = () => (
               fontFamily: "Inter, sans-serif",
             }}
           >
-            RMAFC gains access — through a single, coordinated relationship —
-            to the full range of technical capabilities its mandate may require.
+            RMAFC gains access, through a single, coordinated relationship, to
+            the full range of technical capabilities its mandate may require.
           </div>
           <div
             style={{
