@@ -18,7 +18,7 @@ const reasons = [
   {
     n: "03",
     title: "Executive Development Track Record",
-    body: "FUDMA HODs, faculty leads and academic staff — structured programmes at institutional level, not generic workshops.",
+    body: "FUDMA HODs, faculty leads and academic staff: structured programmes at institutional level, not generic workshops.",
   },
   {
     n: "04",
@@ -34,13 +34,13 @@ const reasons = [
   {
     n: "06",
     title: "Integrated Specialist Network",
-    body: "Full technical capability assembled around each engagement — forensic, econometric, oil and gas, data, legal, regulatory.",
+    body: "Full technical capability assembled around each engagement: forensic, econometric, oil and gas, data, legal, regulatory.",
     top: true,
   },
   {
     n: "07",
     title: "Implementation, Not Just Reports",
-    body: "Our engagements are designed to produce institutional change that persists — not findings documents that are filed and forgotten.",
+    body: "Our engagements are designed to produce institutional change that persists, not findings documents that are filed and forgotten.",
     top: true,
   },
   {
@@ -106,7 +106,7 @@ export const AboutGMPC: React.FC = () => (
               lineHeight: 1.35,
             }}
           >
-            "Institutions — not just policies — determine outcomes. The quality
+            "Institutions, not just policies, determine outcomes. The quality
             of an institution's structure, processes, leadership and
             capabilities is the primary variable between a mandate and its
             delivery. We work to close that gap."
@@ -289,7 +289,7 @@ export const SelectedExperience: React.FC = () => (
       <PageHeader
         eyebrow="05 · Why GMPC"
         title="Selected Relevant Experience"
-        subtitle="Credibility from demonstrated work — each engagement maps to a proposed pillar."
+        subtitle="Credibility from demonstrated work: each engagement maps to a proposed pillar."
       />
 
       <div
@@ -554,7 +554,7 @@ export const SpecialistNetwork: React.FC = () => (
           lineHeight: 1.4,
         }}
       >
-        <strong style={{ color: "var(--brown)" }}>How this works in practice — </strong>
+        <strong style={{ color: "var(--brown)" }}>How this works in practice: </strong>
         For each RMAFC engagement, GMPC identifies the technical disciplines
         required, assembles the appropriate specialist combination, and manages
         the integrated delivery. RMAFC engages one firm. That firm brings what
@@ -590,8 +590,8 @@ export const TrustedBy: React.FC = () => (
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(6, 1fr)",
-          gridTemplateRows: "repeat(5, 64px)",
-          gap: 8,
+          gridTemplateRows: "repeat(5, 90px)",
+          gap: 10,
           flex: 1,
         }}
       >
@@ -604,18 +604,37 @@ export const TrustedBy: React.FC = () => (
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 6,
+              padding: "12px",
+              overflow: "hidden",
             }}
           >
-            <Img
+            <img
               src={`/images/${f}`}
               alt={`Client ${i + 1}`}
               style={{
-                width: "100%",
-                height: "100%",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                width: "auto",
+                height: "auto",
                 objectFit: "contain",
+                display: "block",
               }}
-              fallbackLabel={f}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (parent) {
+                  const placeholder = document.createElement("div");
+                  placeholder.textContent = f;
+                  placeholder.style.cssText = `
+                    font-size: 8pt;
+                    font-family: monospace;
+                    color: #aaa;
+                    text-align: center;
+                  `;
+                  parent.appendChild(placeholder);
+                }
+              }}
             />
           </div>
         ))}
@@ -649,23 +668,23 @@ export const TrustedBy: React.FC = () => (
 const entryPaths = [
   {
     q: "Not sure where to begin?",
-    a: "Institutional Effectiveness Diagnostic — establishes the shared evidence base for everything that follows.",
+    a: "Institutional Effectiveness Diagnostic: establishes the shared evidence base for everything that follows.",
   },
   {
     q: "Revenue is the priority?",
-    a: "Revenue Mobilisation & Diversification Strategy — identifies the highest-impact opportunities across all streams.",
+    a: "Revenue Mobilisation & Diversification Strategy: identifies the highest-impact opportunities across all streams.",
   },
   {
     q: "People and capability?",
-    a: "Executive & Committee Capability Programme — foundation for the RMAFC Fiscal Governance Academy.",
+    a: "Executive & Committee Capability Programme: foundation for the RMAFC Fiscal Governance Academy.",
   },
   {
     q: "Fiscal sustainability questions?",
-    a: "Fiscal Efficiency & Debt Advisory Programme — assesses the revenue-debt interaction.",
+    a: "Fiscal Efficiency & Debt Advisory Programme: assesses the revenue-debt interaction.",
   },
   {
     q: "Want to explore the full picture first?",
-    a: "Strategic Working Session with GMPC — a focused, low-risk conversation to identify the highest-priority engagement and develop it in detail.",
+    a: "Strategic Working Session with GMPC: a focused, low-risk conversation to identify the highest-priority engagement and develop it in detail.",
     highlight: true,
   },
 ];
