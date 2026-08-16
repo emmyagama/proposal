@@ -20,124 +20,32 @@ export const ChromeBar: React.FC = () => (
     <span style={{ fontWeight: 500, textTransform: "uppercase" }}>
       PRIVATE &amp; CONFIDENTIAL
     </span>
-    <GMPCWordmark size={26} />
+    <img
+      src="/images/goldenmuv_logo.png"
+      alt="GMPC Logo"
+      style={{ height: 26, width: "auto" }}
+    />
   </div>
 );
 
-/* ============ GMPC Wordmark (logo fallback) ============ */
+/* ============ GMPC Logo Image ============ */
 export const GMPCWordmark: React.FC<{ size?: number; white?: boolean }> = ({
   size = 50,
-  white = false,
-}) => {
-  const color = white ? "#ffffff" : "#8b6f47";
-  const accent = white ? "#e8d9a0" : "#c5a55a";
-  return (
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <div
-        style={{
-          width: size * 0.7,
-          height: size * 0.7,
-          border: `1.5px solid ${color}`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
-        <div
-          style={{
-            width: size * 0.35,
-            height: size * 0.35,
-            background: accent,
-            transform: "rotate(45deg)",
-          }}
-        />
-      </div>
-      <div style={{ lineHeight: 1 }}>
-        <div
-          style={{
-            fontFamily: "Playfair Display, serif",
-            fontWeight: 700,
-            fontSize: size * 0.4,
-            color,
-            letterSpacing: "2px",
-          }}
-        >
-          GMPC
-        </div>
-        <div
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 500,
-            fontSize: size * 0.16,
-            color,
-            letterSpacing: "1.5px",
-            marginTop: 2,
-            opacity: 0.8,
-          }}
-        >
-          PREMIUM CONSULTING
-        </div>
-      </div>
-    </div>
-  );
-};
+}) => (
+  <img
+    src="/images/goldenmuv_logo.png"
+    alt="GMPC Logo"
+    style={{ height: size, width: "auto" }}
+  />
+);
 
-/* ============ RMAFC Wordmark (logo fallback) ============ */
+/* ============ RMAFC Logo Image ============ */
 export const RMAFCWordmark: React.FC<{ size?: number }> = ({ size = 50 }) => (
-  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-    <div
-      style={{
-        width: size * 0.7,
-        height: size * 0.7,
-        borderRadius: "50%",
-        border: `1.5px solid #8b6f47`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "#fbf7ef",
-      }}
-    >
-      <div
-        style={{
-          fontFamily: "Playfair Display, serif",
-          fontWeight: 700,
-          fontSize: size * 0.22,
-          color: "#8b6f47",
-          letterSpacing: "0.5px",
-        }}
-      >
-        RMAFC
-      </div>
-    </div>
-    <div style={{ lineHeight: 1.1 }}>
-      <div
-        style={{
-          fontFamily: "Playfair Display, serif",
-          fontWeight: 700,
-          fontSize: size * 0.26,
-          color: "#8b6f47",
-          letterSpacing: "1px",
-        }}
-      >
-        RMAFC
-      </div>
-      <div
-        style={{
-          fontFamily: "Inter, sans-serif",
-          fontWeight: 500,
-          fontSize: size * 0.13,
-          color: "#8b6f47",
-          letterSpacing: "0.5px",
-          marginTop: 2,
-          opacity: 0.7,
-          maxWidth: size * 2,
-        }}
-      >
-        Revenue Mobilisation, Allocation &amp; Fiscal Commission
-      </div>
-    </div>
-  </div>
+  <img
+    src="/images/rmafc_logo.png"
+    alt="RMAFC Logo"
+    style={{ height: size, width: "auto" }}
+  />
 );
 
 /* ============ Image with fallback placeholder ============ */
