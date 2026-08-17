@@ -360,32 +360,6 @@ export function PageContextProposition() {
             </div>
           ))}
         </div>
-
-        {/* Quote */}
-        <div
-          style={{
-            borderLeft: "3px solid var(--gold)",
-            background: "var(--gold-wash)",
-            padding: "16px 18px",
-            marginTop: "auto",
-          }}
-        >
-          <div
-            className="font-display"
-            style={{
-              fontStyle: "italic",
-              fontSize: "12pt",
-              color: "var(--brown)",
-              lineHeight: 1.4,
-              marginBottom: 6,
-            }}
-          >
-            &ldquo;They understand exactly what we&rsquo;re building.&rdquo;
-          </div>
-          <div style={{ fontSize: "9.5pt", color: "var(--ink-light)" }}>
-            That&rsquo;s the only reaction this document needs to earn.
-          </div>
-        </div>
       </div>
     </div>
   );
