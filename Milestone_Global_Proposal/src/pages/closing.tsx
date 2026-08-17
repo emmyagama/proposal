@@ -245,97 +245,110 @@ const logoFiles = [
 ];
 
 export function PageTrustedBy() {
-  <div className="slide">
-    <ChromeBar />
-    <div
-      style={{
-        position: "absolute",
-        inset: 0,
-        padding: "70px 50px 32px 50px",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <PageHeader
-        eyebrow="05 · Why GMPC"
-        title="Trusted by Leading Organisations"
-      />
-
+  return (
+    <div className="slide">
+      <ChromeBar />
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          gridTemplateRows: "repeat(5, 90px)",
-          gap: 10,
-          flex: 1,
+          position: "absolute",
+          inset: 0,
+          padding: "70px 50px 32px 50px",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        {logoFiles.map((f, i) => (
-          <div
-            key={i}
-            style={{
-              background: "white",
-              border: "1px solid var(--border-subtle)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "12px",
-              overflow: "hidden",
-            }}
-          >
-            <img
-              src={`/images/${f}`}
-              alt={`Client ${i + 1}`}
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-                width: "auto",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = "none";
-                const parent = target.parentElement;
-                if (parent) {
-                  const placeholder = document.createElement("div");
-                  placeholder.textContent = f;
-                  placeholder.style.cssText = `
-                    font-size: 8pt;
-                    font-family: monospace;
-                    color: #aaa;
-                    text-align: center;
-                  `;
-                  parent.appendChild(placeholder);
-                }
-              }}
-            />
-          </div>
-        ))}
-        {/* Empty slot */}
+        <div className="eyebrow-sm" style={{ marginBottom: 8 }}>
+          05 · WHY GMPC
+        </div>
+        <h1
+          className="font-display"
+          style={{
+            fontSize: 32,
+            color: "var(--brown)",
+            fontWeight: 700,
+            margin: 0,
+            marginBottom: 22,
+          }}
+        >
+          Trusted by Leading Organisations
+        </h1>
+
         <div
           style={{
-            background: "var(--warm-gray-light)",
-            border: "1px dashed var(--border-subtle)",
+            display: "grid",
+            gridTemplateColumns: "repeat(6, 1fr)",
+            gridTemplateRows: "repeat(5, 90px)",
+            gap: 10,
+            flex: 1,
           }}
-        />
-      </div>
+        >
+          {logoFiles.map((f, i) => (
+            <div
+              key={i}
+              style={{
+                background: "white",
+                border: "1px solid var(--border-subtle)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "12px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src={`/images/${f}`}
+                alt={`Client ${i + 1}`}
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                  display: "block",
+                }}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                  const parent = target.parentElement;
+                  if (parent) {
+                    const placeholder = document.createElement("div");
+                    placeholder.textContent = f;
+                    placeholder.style.cssText = `
+                      font-size: 8pt;
+                      font-family: monospace;
+                      color: #aaa;
+                      text-align: center;
+                    `;
+                    parent.appendChild(placeholder);
+                  }
+                }}
+              />
+            </div>
+          ))}
+          {/* Empty slot */}
+          <div
+            style={{
+              background: "var(--warm-gray-light)",
+              border: "1px dashed var(--border-subtle)",
+            }}
+          />
+        </div>
 
-      <div
-        className="caption"
-        style={{
-          marginTop: 14,
-          textAlign: "center",
-          fontStyle: "italic",
-          fontSize: "9.5pt",
-        }}
-      >
-        Over 50 clients served across government, private sector and NGO sectors.
+        <div
+          className="caption"
+          style={{
+            marginTop: 14,
+            textAlign: "center",
+            fontStyle: "italic",
+            fontSize: "9.5pt",
+          }}
+        >
+          Over 50 clients served across government, private sector and NGO sectors.
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 /* ============================================================
    PAGE 25 — PROPOSED NEXT STEP
