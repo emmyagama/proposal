@@ -244,7 +244,7 @@ const logoFiles = [
   "Picture29.png",
 ];
 
-export const TrustedBy: React.FC = () => (
+export function PageTrustedBy() {
   <div className="slide">
     <ChromeBar />
     <div
