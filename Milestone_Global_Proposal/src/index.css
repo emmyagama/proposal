@@ -1,0 +1,268 @@
+@import "tailwindcss";
+
+/* ============================================================
+   GMPC Brand Design Tokens
+   ============================================================ */
+:root {
+  --brown: #8b6f47;
+  --brown-deep: #6b5330;
+  --brown-light: #a68b5e;
+  --gold: #c5a55a;
+  --gold-bright: #d4b96a;
+  --gold-pale: #e8d9a0;
+  --gold-wash: #fbf7ef;
+  --ink: #2b2b2b;
+  --ink-light: #4a4a4a;
+  --warm-gray: #f5f3ef;
+  --warm-gray-light: #faf8f5;
+  --border-subtle: #e8e4de;
+  --border-soft: #ddd8d0;
+  --white: #ffffff;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html,
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: #eeeae3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+.font-sans {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ============================================================
+   Slide geometry — landscape A4 (297 x 210 mm)
+   ============================================================ */
+.slide {
+  width: 297mm;
+  height: 210mm;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  page-break-after: always;
+  break-after: page;
+  flex-shrink: 0;
+  color: var(--ink);
+  box-shadow: 0 10px 30px rgba(60, 45, 25, 0.18),
+    0 2px 6px rgba(60, 45, 25, 0.08);
+}
+
+/* ============================================================
+   Page rules
+   ============================================================ */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+/* ============================================================
+   Print styles — strip shell UI, keep only pages
+   ============================================================ */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .no-print-label {
+    position: static !important;
+  }
+  /* Reset the preview scaling transform — slides must print at native 297×210mm */
+  .slide-scale-wrap {
+    transform: none !important;
+  }
+  .slide {
+    box-shadow: none !important;
+    margin: 0 !important;
+    border: none !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    page-break-after: always;
+    break-after: page;
+  }
+  .slide-stack {
+    padding: 0 !important;
+    gap: 0 !important;
+    background: transparent !important;
+  }
+  /* Force colours to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+
+/* ============================================================
+   UI helpers
+   ============================================================ */
+.eyebrow {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 9pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.geo-square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+.geo-square-lg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+.geo-square-xl {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+.gold-rule {
+  height: 1px;
+  background: var(--gold);
+}
+.gold-rule-2 {
+  height: 2px;
+  background: var(--gold);
+}
+.gold-diag {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--gold),
+    var(--gold) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  opacity: 0.035;
+}
+
+/* ============================================================
+   Corner brackets (decorative)
+   ============================================================ */
+.corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--gold);
+  border-style: solid;
+  border-width: 0;
+  opacity: 0.6;
+}
+.corner.tl {
+  top: 36px;
+  left: 36px;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.corner.tr {
+  top: 36px;
+  right: 36px;
+  border-top-width: 1.5px;
+  border-right-width: 1.5px;
+}
+.corner.bl {
+  bottom: 36px;
+  left: 36px;
+  border-bottom-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.corner.br {
+  bottom: 36px;
+  right: 36px;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+.corner.white {
+  border-color: #ffffff;
+  opacity: 0.3;
+}
+
+/* ============================================================
+   Chrome bar
+   ============================================================ */
+.chrome {
+  position: absolute;
+  top: 14px;
+  left: 19mm;
+  right: 19mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8.5pt;
+  letter-spacing: 2.5px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Pathway numerals
+   ============================================================ */
+.roman {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* ============================================================
+   Preview scaling container
+   ============================================================ */
+.scale-wrap {
+  transform-origin: top center;
+}
+
+/* Subtle gold-left border card */
+.gold-left {
+  border-left: 3px solid var(--gold);
+}
+.gold-top {
+  border-top: 3px solid var(--gold);
+}
+.brown-left {
+  border-left: 3px solid var(--brown);
+}
+
+/* ============================================================
+   Utility: fit image with overlay
+   ============================================================ */
+.img-overlay-brown {
+  position: relative;
+  overflow: hidden;
+}
+.img-overlay-brown::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(139, 111, 71, 0.08);
+  pointer-events: none;
+}
